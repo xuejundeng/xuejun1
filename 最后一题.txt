@@ -1,0 +1,48 @@
+package com.itheima.truetest;
+
+import java.util.Scanner;
+
+public class Test2 {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("请输入您要出行的月份");
+        while (true){
+            int num1 = sc.nextInt();
+            if(num1 > 12 || num1 <= 0){
+                System.out.println("月份是从1-12,您的输入有误,请检查");
+            }else
+            if(num1 >=4 && num1 <= 10){
+                System.out.println("请输入您要购买的仓位(1代表头等仓,2代表经济舱):");
+                int num2 = sc.nextInt();
+                if (num2 == 1){
+                    System.out.println("旺季头等仓打9折,折后金额为4500.0");
+                }else if(num2 == 2){
+                    System.out.println("旺季经济舱打8折,折后金额为4000.0");
+                }
+                else {
+                    System.out.println("仓位不合法");
+                }
+		//这里加break,仓位不合法程序也停了
+
+            } else {
+                System.out.println("请输入您要购买的仓位(1代表头等仓,2代表经济舱):");
+                int num3 = sc.nextInt();
+                if (num3 == 1){
+                    System.out.println("淡季头等仓打5折,折后金额为2500.0");
+                }else if(num3 == 2){
+                    System.out.println("淡季经济舱打4折,折后金额为2000.0");
+                } else {
+                    System.out.println("仓位不合法");
+		}
+		//这里加break,仓位不合法程序也停了
+            }
+
+        }
+
+
+
+    }
+}
